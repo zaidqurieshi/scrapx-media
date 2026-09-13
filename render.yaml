@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: scrapx-media-forwarder
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: TELEGRAM_API_ID
+        sync: false
+      - key: TELEGRAM_API_HASH
+        sync: false
+      - key: TELEGRAM_STRING_SESSION
+        sync: false
+      - key: FIRST_SQUAWK_CHANNEL
+        value: "@firstsquaw"
+      - key: FAYTUKS_NETWORK_CHANNEL
+        value: "@Faytuks_Network"
+      - key: SCRAPX_MEDIA_CHANNEL
+        value: "@scrapxmedia"
+      - key: ENABLE_FIRST_SQUAWK
+        value: "true"
+      - key: ENABLE_FAYTUKS
+        value: "true"
+      - key: DRY_RUN
+        value: "false"
+      - key: PORT
+        value: "8080"

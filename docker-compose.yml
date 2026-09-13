@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  scrapx:
+    build: .
+    container_name: scrapx_media_forwarder
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+

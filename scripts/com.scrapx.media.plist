@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.scrapx.media</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/caffeinate</string>
+        <string>-s</string>
+        <string>-i</string>
+        <string>-m</string>
+        <string>/Users/zaidqurieshi/Projects/ScrapX Project/venv/bin/python</string>
+        <string>/Users/zaidqurieshi/Projects/ScrapX Project/main.py</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/zaidqurieshi/Projects/ScrapX Project</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/zaidqurieshi/Projects/ScrapX Project/logs/launchd.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/zaidqurieshi/Projects/ScrapX Project/logs/launchd_err.log</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>PYTHONUNBUFFERED</key>
+        <string>1</string>
+    </dict>
+</dict>
+</plist>
+
